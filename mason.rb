@@ -1,8 +1,8 @@
 class Mason < Formula
   desc "A template generator which helps teams generate files quickly and consistently."
   homepage "https://pub.dev/packages/mason"
-  url "https://github.com/felangel/mason/archive/refs/tags/v0.0.1-dev.49.tar.gz"
-  sha256 "93882212485524bc85ff62340f7b6a9509b0553daf28e29f6462be86e34ffc6d"
+  url "https://github.com/felangel/mason/archive/refs/tags/v0.0.1-dev.51.tar.gz"
+  sha256 "782248edd1bbe71814f1e87a7f109e3f2657831a522b5aa28fe4c88152918116"
   license "MIT"
 
   depends_on "dart"
