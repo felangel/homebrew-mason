@@ -1,14 +1,17 @@
 class Mason < Formula
   desc "A template generator which helps teams generate files quickly and consistently."
-  homepage "https://pub.dev/packages/mason"
-  url "https://github.com/felangel/mason/archive/refs/tags/v0.0.1-dev.57.tar.gz"
-  sha256 "719033003c42357f25a00545d10405067cd29eedb4055e5cd0a0b7af3252d361"
+  homepage "https://pub.dev/packages/mason_cli"
+  url "https://github.com/felangel/mason/archive/refs/tags/mason_cli-v0.1.0-dev.2.tar.gz"
+  sha256 "4eaef5e249653b1c8803a56a6dd2580324b151db232f8de82e225f589679ae3a"
   license "MIT"
 
   depends_on "dart"
 
   def install
     dart = Formula["dart"].opt_bin
+
+    # Change directories into the mason_cli package directory.
+    Dir.chdir('packages/mason_cli')
 
     pubspec = YAML.safe_load(File.read("pubspec.yaml"))
     version = pubspec["version"]
