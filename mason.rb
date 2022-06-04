@@ -3,8 +3,8 @@ require "yaml"
 class Mason < Formula
   desc "A template generator which helps teams generate files quickly and consistently."
   homepage "https://github.com/felangel/mason"
-  url "https://github.com/felangel/mason/archive/refs/tags/mason_cli-v0.1.0-dev.26.tar.gz"
-  sha256 "4f910ef2486eee3bdfdaf1405f4754bcaa9731b7ae14a19f2dc4a2acb5fd8c2a"
+  url "https://github.com/felangel/mason/archive/refs/tags/mason_cli-v0.1.0-dev.27.tar.gz"
+  sha256 "64eb2220d89f59ae778f6915acd93f808fa254e94867ab44eda42d68ddd08d1c"
   license "MIT"
 
   depends_on "dart-lang/dart/dart" => :build
