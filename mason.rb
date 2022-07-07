@@ -18,13 +18,7 @@ class Mason < Formula
 
     system _dart/"dart", "pub", "get"
   
-    # Build a native-code executable on 64-bit systems only. 32-bit Dart
-    # doesn't support this.
-    if Hardware::CPU.is_64_bit?
-      _install_native_executable
-    else
-      _install_script_snapshot
-    end
+    _install_script_snapshot
 
     chmod 0555, "#{bin}/mason"
   end
@@ -37,12 +31,6 @@ class Mason < Formula
 
   def _version
     @_version ||= YAML.safe_load(File.read("pubspec.yaml"))["version"]
-  end
-
-  def _install_native_executable
-    system _dart/"dart", "compile", "exe", "-Dversion=#{_version}",
-           "bin/mason.dart", "-o", "mason"
-    bin.install "mason"
   end
 
   def _install_script_snapshot
