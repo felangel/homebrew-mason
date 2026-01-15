@@ -43,7 +43,7 @@ class Mason < Formula
     # Change directories into the mason_cli package directory.
     Dir.chdir('packages/mason_cli')
 
-    system dart/"dart", "pub", "get"
+    system dart, "pub", "get"
   
     if Hardware::CPU.is_64_bit?
       _install_native_executable(dart)
