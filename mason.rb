@@ -8,19 +8,19 @@ class Mason < Formula
   license "MIT"
 
   # Determine architecture and set the Dart SDK resource accordingly
-  dart_sdk_version = "3.6.0"
+  dart_sdk_version = "3.7.0"
   dart_sdk_url, dart_sdk_sha = if OS.mac? && Hardware::CPU.intel?
     ["https://storage.googleapis.com/dart-archive/channels/stable/release/#{dart_sdk_version}/sdk/dartsdk-macos-x64-release.zip",
-     "b859b1abd92997b389061be6b301e598a3edcbf7e092cfe5b8d6ce2acdf0732b"]
+     "d601c9da420552dc6deba1992d07aad9637b970077d58c5cda895baebc83d7f5"]
   elsif OS.mac? && Hardware::CPU.arm?
     ["https://storage.googleapis.com/dart-archive/channels/stable/release/#{dart_sdk_version}/sdk/dartsdk-macos-arm64-release.zip",
-     "1bdbc6544aaa53673e7cbbf66ad7cde914cb7598936ebbd6a4245e1945a702a0"]
+     "9bfd7c74ebc5f30b5832dfcf4f47e5a3260f2e9b98743506c67ad02b3b6964bb"]
   elsif OS.linux? && Hardware::CPU.intel?
     ["https://storage.googleapis.com/dart-archive/channels/stable/release/#{dart_sdk_version}/sdk/dartsdk-linux-x64-release.zip",
-     "8e14ff436e1eec72618dabc94f421a97251f2068c9cc9ad2d3bb9d232d6155a3"]
+     "7c849abc0d06a130d26d71490d5f2b4b2fe1ca477b1a9cee6b6d870e6f9d626f"]
   elsif OS.linux? && Hardware::CPU.arm?
     ["https://storage.googleapis.com/dart-archive/channels/stable/release/#{dart_sdk_version}/sdk/dartsdk-linux-arm64-release.zip",
-     "0f82f10f808c7003d0d03294ae9220b5e0824ab3d2d19b4929d4fa735254e7bf"]
+     "367b5a6f1364a1697dc597775e5cd7333c332363902683a0970158cbb978b80d"]
   end
 
   resource "dart-sdk" do
