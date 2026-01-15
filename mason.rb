@@ -62,8 +62,8 @@ class Mason < Formula
 
   def _install_native_executable(dart)
     system dart, "compile", "exe", "-Dversion=#{_version}",
-           "bin/main.dart", "-o", "fvm"
-    bin.install "fvm"
+           "bin/mason.dart", "-o", "mason"
+    bin.install "mason"
   end
 
   def _install_script_snapshot
